@@ -7,8 +7,6 @@
   justify-content: center;
   border: 1px solid black;
   margin: 0 7.5px 15px;
-  background-position: center;
-  background-size: cover;
   overflow: hidden;
 
   &:hover {
@@ -19,7 +17,7 @@
       transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     }
 
-    &.content {
+    & .content {
       opacity: 0.9;
     }
   }
@@ -57,7 +55,7 @@
 
     .title {
       font-weight: bold;
-      margin-bottom: 6px;
+      margin: 0 6px 0;
       font-size: 22px;
       color: #4a4a4a;
     }
