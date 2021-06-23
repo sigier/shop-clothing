@@ -24,8 +24,14 @@
     }
 
     .total {
-        margin-top: 30px;
+        display: flex; 
+        align-items: center;
         margin-left: auto;
         font-size: 36px;
+    }
+
+    button { 
+        margin-left: 100px;
+        
     }
 }
