@@ -14,7 +14,7 @@ export const removeItem = item => ({
   payload: item
 });
 
-export const effaceItemFromCart = item => ({
-  type: CartActionTypes.EFFACE_ITEM_FROM_CART,
+export const clearItemFromCart = item => ({
+  type: CartActionTypes.CLEAR_ITEM_FROM_CART,
   payload: item
 });
