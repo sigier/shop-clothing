@@ -13,6 +13,12 @@ export const googleSignInStart = () => ({
   type: UserActionTypes.GOOGLE_SIGNIN_START
 });
 
+export const emailSignInStart = (emailAndPassword) => ({
+
+  type: UserActionTypes.EMAIL_SIGNIN_START,
+  payload: emailAndPassword
+});
+
 export const signInSuccess = (user) => ({
 
   type: UserActionTypes.SIGNIN_SUCCESS,
@@ -25,15 +31,25 @@ export const signInFailure = (error) => ({
   payload: error
 });
 
-export const emailSignInStart = (emailAndPassword) => ({
-
-  type: UserActionTypes.EMAIL_SIGNIN_START,
-  payload: emailAndPassword
-});
-
 export const persistUserSession = () => ({
 
   type: UserActionTypes.PERSIST_USER_SESSION
+});
+
+export const signOutStart = () => ({
+
+  type: UserActionTypes.SIGNOUT_START
+});
+
+export const signOutSuccess = () => ({
+
+  type: UserActionTypes.SIGNOUT_SUCCESS,
+});
+
+export const signOutFailure = (error) => ({
+
+  type: UserActionTypes.SIGNOUT_FAILURE,
+  payload: error
 });
 
 
