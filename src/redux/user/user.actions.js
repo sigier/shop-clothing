@@ -31,4 +31,9 @@ export const emailSignInStart = (emailAndPassword) => ({
   payload: emailAndPassword
 });
 
+export const persistUserSession = () => ({
+
+  type: UserActionTypes.PERSIST_USER_SESSION
+});
+
 
