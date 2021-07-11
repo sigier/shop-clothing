@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-
 import { store, persistor } from './redux/store';
+import { resolvers, typeDefs } from './graphql/resolvers';
 
 
 import './index.css';
@@ -27,7 +27,17 @@ const cache = new InMemoryCache();
 const client = new ApolloClient({
 
   link: httpLink,
-  cache
+  cache,
+  resolvers,
+  typeDefs
+});
+
+client.writeData({
+  data: {
+    cartHidden: true,
+    cartItems: [],
+    itemsCount: 0
+  }
 });
 
 
